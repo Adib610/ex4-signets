@@ -1,0 +1,26 @@
+.ListeDossiers {
+  display: flex;
+  list-style: none;
+  padding: 10px 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dossierVide{
+  width: 300px;
+  height: 320px;
+  background-color: lightseagreen;
+
+}
+
+.dossierVide p{
+  font-size: 1.5em;
+  color: white;
+  margin: 15px;
+}
+
+#smiley{
+  font-size: 5em;
+  text-align: center;
+
+}
