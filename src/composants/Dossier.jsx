@@ -25,7 +25,11 @@ export default function Dossier({id, nom, couleur, datemodif, couverture}) {
         <IconButton className="deplacer" aria-label="déplacer" disableRipple={true}>
           <SortIcon />
         </IconButton>
-        <img src={couverture} alt={nom}/>
+        {couverture ? (
+            <img src={couverture} alt={nom}/>
+          ) : (
+            <img src={imageCouverture} alt={nom}/>
+          )}
       </div>
       <div className="info">
         <h2>{nom}</h2>

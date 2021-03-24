@@ -32,24 +32,39 @@ export default function ListeDossiers({utilisateur, etatDossiers}) {
   );
 
   
-  if(dossiers.length > 0){
+
     return ( 
       <ul className="ListeDossiers">
         {
-          dossiers.map( 
+          dossiers.length > 0 ? (
+            dossiers.map( 
             dossier =>  <li key={dossier.id}><Dossier {...dossier} /></li>
+          )) : (
+            <div className="dossierVide"> <p>Votre Liste de dossiers est vide</p> <br/> <p id="smiley">;-(</p> </div>
           )
         }
       </ul>
     );
   }
-  else
-  return ( 
-    <ul className="ListeDossiers">
-      {
-        <div className="dossierVide"> <p>Votre Liste de dossiers est vide</p> <br/> <p id="smiley">;-(</p> </div>
-      }
-    </ul>
-  );
 
-}
+
+// if(dossiers.length > 0){
+//   return ( 
+//     <ul className="ListeDossiers">
+//       {
+//         dossiers.map( 
+//           dossier =>  <li key={dossier.id}><Dossier {...dossier} /></li>
+//         )
+//       }
+//     </ul>
+//   );
+// }
+// else
+// return ( 
+//   <ul className="ListeDossiers">
+//     {
+//       <div className="dossierVide"> <p>Votre Liste de dossiers est vide</p> <br/> <p id="smiley">;-(</p> </div>
+//     }
+//   </ul>
+// );
+// }
